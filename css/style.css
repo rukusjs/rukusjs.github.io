@@ -1,0 +1,326 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Main Styling */
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+/* Utility Classes */
+.container{
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.text-primary{
+    /* This is creating dynamic words ("Enjoy") */
+    color:#f7c08a;
+}
+
+.lead{
+    /* altering the size of the main paragraphs */
+    font-size: 20px;
+}
+
+.btn{
+    /* button styling */
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff;
+    background: #333333;
+    /* this is so the background colour isn't wrapped right on the text itself */
+    padding: 13px 20px;
+    /* links by default do not have a border, but buttons will - this is a global button class */
+    border: none;
+    /* Links have cursors by default, but buttons do not - global coverage */
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:#f7c08a;
+    color:#333333;
+}
+
+.btn-light{
+    background: #f4f4f4;
+    color: #333;
+}
+
+
+
+.bg-dark{
+    background: #333;
+    color:#fff;
+}
+
+.bg-light{
+    background: #f4f4f4;
+    color:#333;
+}
+
+.bg-primary{
+    background: #f7c08a;
+    color:#333;;
+}
+
+.clr{
+    clear: both;
+}
+
+.l-heading{
+    font-size: 40px;
+}
+
+#dark{
+    color:#333;
+}
+
+/* Padding */
+.py-1{
+    padding: 10px 0;
+}
+
+.py-2{
+    padding: 20px 0;
+}
+
+.py-3{
+    padding: 30px 0;
+}
+
+/* Navbar */
+
+#navbar {
+    background-color: #333333;
+    color: #ffffff;
+    overflow: auto;
+   
+    
+}
+
+#navbar a {
+    color: #fff;
+}
+/* Floated left and there is some space with the logo so it isn't directly top right corner */
+#navbar h1 {
+    float: left;
+    padding-top:20px;
+}
+
+#navbar ul {
+    /* Thiscommands bring the UL LI links (contact / about / home) to the right of the page */
+    float:right;
+    /* This removes the bullet points from the LI elements */
+    list-style: none;
+}
+
+#navbar ul li {
+    /* Floating these to the left makes them appear horizontally instead of vertically */
+    float: left;
+}
+
+#navbar ul li a{
+    /* this allows us to add padding */
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover, 
+#navbar ul li .current{
+    /* This area is what adds the hover state, as well as the currently selected state to our navbar items */
+    background-color: #444444;
+    color: #f7c08a;
+}
+
+/* Showcase */
+
+#showcase {
+    /* This grabs our image - tells it we DO NOT want it to repeat - we want it centered on both the x and y axis, and we want it to cover the entire area */
+    background: url('../image_resources/showcase.jpg') no-repeat center center/cover;
+    height: 600px;
+}
+
+#showcase .showcase-content{
+    /* This is refering to the h1/paragraph/link in the show case (Enjoy / lorem) */
+    color: #ffffff;
+    /* center the text */
+    text-align: center;
+    /* push everything away form the top / distance between header and paragraph is pulled from our global heading padding up top (20px) */
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1{
+    font-size: 60px;
+    /* spacing below the h1 */
+    line-height: 1.2em;
+
+}
+
+#showcase .showcase-content p{
+    /* push the link button further away */
+    padding-bottom: 20px;
+    /* button even further away, and if text collapses, space between lines */
+    line-height: 1.7em;    
+}
+
+
+/* Home Info */
+
+#home-info{
+    /* This ID wraps around both the image and the text box - height is 400 for both now. */
+    height: 400px;
+}
+
+#home-info .info-img{
+    float: left;
+    width: 50%;
+    background: url('../image_resources/photo-1.jpg') no-repeat;
+    /* We want the image to take up the whole space */
+    min-height: 100%;
+}
+
+#home-info .info-content{
+    float: right;
+    width: 50%;
+    height:100%;
+    text-align: center;
+    /* move it away from the top and sides */
+    padding: 50px 30px;
+    /* avoid scroll bar */
+    overflow: hidden;
+}
+
+#home-info .info-content p{
+    /* moves the button away */
+    padding-bottom: 30px;
+}
+
+/* Features */
+
+.box {
+    /* this class is wrapping the icon, the header and the paragraph */
+    float:left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i{
+    /* push the text down */
+    margin-bottom: 10px;
+}
+
+/* About Info */
+#about-info .info-right{
+    float: right;
+    width:50%;
+    min-height: 100%;
+    
+}
+
+#about-info .info-right img {
+    width: 70%;
+    /* Displaying as a block will allow us to set a margin */
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#about-info .info-left {
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+/* Testimonials */
+
+#testimonials {
+    height: 600px;
+    background: url('../image_resources/test-bg.jpg') no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+#testimonials h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#testimonials .testimonial{
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    /* Opacity - makes the element slightly opaque (0-1) 1 is full / 0 transparent */
+    opacity: 0.9;
+}
+
+#testimonials .testimonial img{
+    /* images are breaking out so lets deal with those */
+    width: 100px;
+    float: left;
+    /* Push the text away */
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Contact Form */
+#contact-form .form-group{
+    /* push each field down */
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    /* Push each element on to their own line */
+    display: block;
+    /* add some spacing */
+    margin-bottom: 5px;
+}
+
+#contact-form textarea{
+    height: 200px;
+}
+
+#contact-form input,
+#contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus{
+    outline:none;
+    border-color: #f7c08a;
+}
+
+
+/* Footer */
+
+#main-footer{
+    text-align: center;
+    background: #444444;
+    color: #fff;
+    padding: 20px;
+}
